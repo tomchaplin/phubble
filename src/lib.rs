@@ -45,7 +45,7 @@ pub fn extend_telescope(
             .entries()
             .map(|row_idx| row_idx + domain_shift_idx_diff);
         let image_bdry = map
-            .get(domain_idx)
+            .get(domain_idx - domain_start)
             .unwrap()
             .entries()
             .map(|row_idx| row_idx + codomain_start);
