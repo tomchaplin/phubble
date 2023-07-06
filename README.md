@@ -1,16 +1,14 @@
 # phubble
-Persistent homology mapping telescope
 
-## How to build
+Do you have a persistent chain complex that is not filtered (i.e. the chain maps are not inclusions)?
+Would you like to convert this into a filtered chain complex so that you can pass it along to a persistent homology library, such as [lophat](https://github.com/tomchaplin/lophat)?
+Look no further!
+`phubble` realises your wildest persistent homology dreams by constructing the [mapping telescope](https://ncatlab.org/nlab/show/mapping+telescope).
 
-1. You will need a [rust toolchain](https://doc.rust-lang.org/cargo/getting-started/installation.html)
-2. Ideally, switch into a python virtual environment.
-3. Run `pip install maturin[zig]`
-4. Located in the `phubble` directory run
-```
-maturin dev --release
-```
-5. Within your virtual environment, you should now be able to
-```
-from phubble import build_telescope
+The only function of interest is `build_telescope` which is exported as a Python binding.
+Documentation is forthcoming (hopefully) but get in touch if you need advice on how to use.
+
+Install via
+```shell
+pip install phubble
 ```
